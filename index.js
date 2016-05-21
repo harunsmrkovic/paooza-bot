@@ -3,10 +3,11 @@ import SlackBot from 'slackbots'
 import _ from 'underscore'
 import Q from 'q'
 
-import recognizeIntent from './intents.js'
+import recognizeIntent from './intents'
+import config from './config'
 
-const bot = new SlackBot({ token: 'xoxb-44769858246-JUIYWhyRHNgurmwRu20hvTqc', name: 'Pasha Konobar' })
-const trello = new Trello('09141f27e3d86dff19f42ccec277ab54', '8cd0841ae9411d071baccbbdc5d351ba154cda40fa04c1c2bdef7b00be591d30')
+const bot = new SlackBot(config.slack)
+const trello = new Trello(config.trello.id, config.trello.token)
 
 const sendMessage = (channel, message) => {
   return bot.postMessage(channel, message, { as_user: true })
