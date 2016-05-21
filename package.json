@@ -1,0 +1,36 @@
+{
+  "name": "paooza-bot",
+  "version": "1.0.0",
+  "description": "Bot for ordering food via Slack... sort of",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^2.0.0-rc.5",
+    "node-trello": "^1.1.2",
+    "q": "^1.4.1",
+    "slackbots": "^0.5.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-polyfill": "^6.9.0"
+  },
+  "scripts": {
+    "start": "babel ./*.js -d build && node build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harunsmrkovic/paooza-bot.git"
+  },
+  "author": "Harun + Vedad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harunsmrkovic/paooza-bot/issues"
+  },
+  "homepage": "https://github.com/harunsmrkovic/paooza-bot#readme",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
+}
